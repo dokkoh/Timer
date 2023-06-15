@@ -1,0 +1,63 @@
+/* Variabes */
+$greyMain: #e0e0e0;
+$grey: #f3f3f3;
+$black: #000000;
+$white: white;
+$base-color: $greyMain;
+
+/* Mixin */
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  background: $base-color;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 30px auto;
+  color: $black;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+#seconds,
+#tens {
+  font-size: 2em;
+}
+
+button {
+  background: $base-color;
+  color: $black;
+  border: solid 1px $white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  &:hover {
+    @include transition;
+    background: $white;
+    border: solid 1px $white;
+    color: $black;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
