@@ -20,10 +20,13 @@ body {
 }
 
 .wrapper {
-  width: 800px;
-  margin: 30px auto;
   color: $black;
   text-align: center;
+  @media screen and (max-width: 51rem) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }
 
 h1 {
